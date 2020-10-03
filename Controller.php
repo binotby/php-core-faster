@@ -10,9 +10,7 @@ class Controller
 
     public function setLayout($layout)
     {
-        $layout = Application::$app->controller->layout;
-        ob_start();
-        include_once Application::$ROOT_DIR . "views/layouts";
+        $this->layout = $layout;
     }
 
     public function render($view, $params = [])

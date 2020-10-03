@@ -40,7 +40,6 @@ class Request
             foreach ($_GET as $key => $value) {
                 $body[$key] = filter_input(INPUT_GET, $key, FILTER_SANITIZE_SPECIAL_CHARS);
             }
-            echo'asdasdas';
         }
 
         if ($this->method() === 'post') {

@@ -1,0 +1,10 @@
+{
+    "name": "plass.id/php-core-faster",
+    "authors": [
+        {
+            "name": "Albi Fauzi",
+            "email": "binotby@gmail.com"
+        }
+    ],
+    "require": {}
+}

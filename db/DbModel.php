@@ -48,4 +48,13 @@ abstract class DbModel extends Model
         $statement->execute();
         return $statement->fetchObject(static::class);
     }
+
+    public function all()
+    {
+        $tableName = static::tableName();
+        $sql = "SELECT * FROM $tableName";
+        $statement = self::prepare($sql);
+        $statement->execute();
+        return $statement->fetchAll();
+    }
 }

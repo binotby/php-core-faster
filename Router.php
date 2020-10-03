@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace binotby\phpcorefaster;
 
-use app\core\exception\NotFoundException;
+use binotby\phpcorefaster\exception\NotFoundException;
 
 class Router
 {

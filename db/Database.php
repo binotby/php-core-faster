@@ -1,6 +1,6 @@
-<?php namespace app\core\db;
+<?php namespace binotby\phpcorefaster\db;
 
-use app\core\Application;
+use binotby\phpcorefaster\Application;
 use PDO;
 
 class Database

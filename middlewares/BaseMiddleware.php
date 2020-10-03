@@ -1,4 +1,4 @@
-<?php namespace app\core\middlewares;
+<?php namespace binotby\phpcorefaster\middlewares;
 
 
 abstract class BaseMiddleware

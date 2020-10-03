@@ -1,7 +1,7 @@
-<?php namespace app\core\db;
+<?php namespace binotby\phpcorefaster\db;
 
-use app\core\Application;
-use app\core\Model;
+use binotby\phpcorefaster\Application;
+use binotby\phpcorefaster\Model;
 
 
 abstract class DbModel extends Model

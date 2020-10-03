@@ -1,4 +1,4 @@
-<?php namespace app\core\form;
+<?php namespace binotby\phpcorefaster\form;
 
 
 class TextareaField extends BaseField

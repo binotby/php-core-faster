@@ -1,7 +1,7 @@
-<?php namespace app\core\middlewares;
+<?php namespace binotby\phpcorefaster\middlewares;
 
-use app\core\Application;
-use app\core\exception\ForbiddenException;
+use binotby\phpcorefaster\Application;
+use binotby\phpcorefaster\exception\ForbiddenException;
 
 class AuthMiddleware extends BaseMiddleware
 {

@@ -1,6 +1,6 @@
-<?php namespace app\core;
+<?php namespace binotby\phpcorefaster;
 
-use app\core\middlewares\BaseMiddleware;
+use binotby\phpcorefaster\middlewares\BaseMiddleware;
 
 class Controller
 {

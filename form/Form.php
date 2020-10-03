@@ -1,6 +1,6 @@
-<?php namespace app\core\form;
+<?php namespace binotby\phpcorefaster\form;
 
-use app\core\Model;
+use binotby\phpcorefaster\Model;
 
 class Form
 {

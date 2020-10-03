@@ -1,4 +1,4 @@
-<?php namespace app\core\exception;
+<?php namespace binotby\phpcorefaster\exception;
 
 
 class NotFoundException extends \Exception

@@ -1,9 +1,9 @@
 <?php
 
-namespace app\core;
+namespace binotby\phpcorefaster;
 
-use app\core\db\Database;
-use app\core\db\DbModel;
+use binotby\phpcorefaster\db\Database;
+use binotby\phpcorefaster\db\DbModel;
 
 class Application
 {

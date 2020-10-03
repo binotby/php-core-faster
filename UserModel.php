@@ -1,6 +1,6 @@
-<?php namespace app\core;
+<?php namespace binotby\phpcorefaster;
 
-use app\core\db\DbModel;
+use binotby\phpcorefaster\db\DbModel;
 
 
 abstract class UserModel extends DbModel

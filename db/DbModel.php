@@ -17,12 +17,26 @@ abstract class DbModel extends Model
         $tableName = $this->tableName();
         $attributes = $this->attributes();
         $params = array_map(fn($attr) => ":$attr", $attributes);
-        $statement = self::prepare("INSERT INTO $tableName (".implode(',', $attributes).")
-            VALUES(".implode(',', $params).")"
-        );
 
-        foreach ($attributes as $attribute) {
-            $statement->bindValue(":$attribute", $this->{$attribute});
+        if ($this->id) {
+            $query_string = '';
+            foreach ($attributes as $attribute ) {
+                $query_string .= "$attribute=:$attribute,";
+            }
+            $query_string = rtrim($query_string, ',');
+            $statement = self::prepare("UPDATE $tableName SET $query_string WHERE id=$this->id;");
+    
+            foreach ($attributes as $attribute) {
+                $statement->bindValue(":$attribute", $this->{$attribute});
+            }
+        } else {
+            $statement = self::prepare("INSERT INTO $tableName (".implode(',', $attributes).")
+                VALUES(".implode(',', $params).")"
+            );
+    
+            foreach ($attributes as $attribute) {
+                $statement->bindValue(":$attribute", $this->{$attribute});
+            }
         }
         
         $statement->execute();
@@ -34,7 +48,7 @@ abstract class DbModel extends Model
         return Application::$app->db->pdo->prepare($sql);
     }
 
-    public function findOne($where)
+    public function get($where)
     {
         $tableName = static::tableName();
         $attributes = array_keys($where);

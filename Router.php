@@ -37,7 +37,7 @@ class Router
         }
 
         if (is_string($callback)) {
-            return Application::$app->view->renderView($callback);
+            return $this->renderView($callback);
         }
 
         if (is_array($callback)) {
@@ -52,5 +52,15 @@ class Router
         }
 
         return call_user_func($callback, $this->request, $this->response);
+    }
+
+    public function renderView($view, $params = [])
+    {
+        return Application::$app->view->renderView($view, $params);
+    }
+
+    public function renderViewOnly($view, $params = [])
+    {
+        return Application::$app->view->renderViewOnly($view, $params);
     }
 }
